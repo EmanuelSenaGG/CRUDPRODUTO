@@ -1,0 +1,49 @@
+﻿@model PrimeiroCRUD.Models.ProdutoModel
+
+@{
+    ViewData["Title"] = "Deletar";
+}
+
+<h1 class="display-4">Remoção de Produtos</h1>
+
+<div>
+   
+    
+    <hr />
+    <label></label>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Estoque)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estoque)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+    </dl>
+    <label></label>
+    <hr />
+    <p class="display-6">Deseja deletar o produto permanentemente?</p>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger"/> 
+        <a type="button" class="btn btn-secondary" asp-action="Index">Voltar</a>
+    </form>
+</div>
